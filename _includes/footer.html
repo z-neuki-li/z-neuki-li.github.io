@@ -1,0 +1,34 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <!-- Footer Top: Copyright Information -->
+  <div class="footer-top">
+    <p>Supported by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a>. © 2024 {{ site.title | escape }}. All rights reserved.</p>
+  </div>
+
+  <!-- Footer Bottom: Contact and Social Media -->
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <!-- Column 1: Contact Information -->
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+          </li>
+          {%- if site.email -%}
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <!-- Column 2: Social Media Links -->
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+    </div>
+  </div>
+</footer>

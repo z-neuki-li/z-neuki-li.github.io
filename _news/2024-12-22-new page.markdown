@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Joining Lab and created this new site!"
+date:   2024-12-22 18:08:31 -0600
+categories: 
+    - news
+tags:
+    - personal
+---
+
+I graduated from the [Data Science in Human Behavior](https://datascience.psych.wisc.edu/) Program in 2024 fall, joining the KCLab investigated by Prof. Timothy T. Rogers. My capstone project is focused on the application of machine learning techniques to decode the individualized and distributed neural representations from fMRI data.

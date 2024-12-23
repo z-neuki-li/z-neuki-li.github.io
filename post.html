@@ -1,0 +1,20 @@
+---
+layout: default
+title: Post
+---
+
+<h1>Post</h1>
+
+<h2>News</h2>
+<ul>
+  {% for item in site.news %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a> - {{ item.date | date: "%Y-%m-%d" }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Teaching</h2>
+<ul>
+  {% for item in site.teaching %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a> - {{ item.date | date: "%Y-%m-%d" }}</li>
+  {% endfor %}
+</ul>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Joining the Lab and created this new site!"
+title:  "Joining Knowledge and Concepts Lab!"
 date:   2024-12-22 18:08:31 -0600
 categories: 
     - news

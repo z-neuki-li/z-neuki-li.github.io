@@ -5,4 +5,4 @@
 layout: home
 ---
 
-A personal blog sharing ideas about cognitive psychology, statistics, and programming.
+Hi, this is Neuki, nice to meet you here!

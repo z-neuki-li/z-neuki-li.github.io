@@ -1,24 +1,13 @@
 <footer class="site-footer h-card">
   <div class="footer-col-wrapper">
     <div class="footer-col footer-col-1">
-      <ul class="contact-list">
-        <li class="p-name">
-          {%- if site.author -%}
-            {{ site.author | escape }}
-          {%- else -%}
-            {{ site.title | escape }}
-          {%- endif -%}
-        </li>
-        {%- if site.email -%}
-        <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        {%- endif -%}
-      </ul>
+      {%- include contact.html -%}
     </div>
     <div class="footer-col footer-col-2">
       {%- include social.html -%}
     </div>
   </div>
   <div class="footer-bottom">
-    <p>Supported by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a>. © {{ 'now' | date: "%Y" }} {{ site.title | escape }}. All rights reserved.</p>
+    <p>Supported by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a>. © 2024-{{ 'now' | date: "%Y" }} {{ site.author | escape }}. All rights reserved.</p>
   </div>
 </footer>

@@ -1,20 +1,93 @@
 ---
 layout: default
-title: Post
+title: Posts
 ---
 
-<h1>Post</h1>
+<h1>Posts</h1>
 
-<h2>News</h2>
-<ul>
-  {% for item in site.news %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a> - {{ item.date | date: "%Y-%m-%d" }}</li>
+<h2 style="display: flex; justify-content: space-between; align-items: center;">
+  News
+  {% if site.news.size > 2 %}
+  <span class="read-more-link" onclick="toggleNews()" id="news-btn">Read More</span>
+  {% endif %}
+</h2>
+<ul id="news-list">
+  {% assign sorted_news = site.news | sort: 'date' | reverse %}
+  {% for item in sorted_news %}
+    <li class="{% if forloop.index > 2 %}hidden news-hidden{% endif %}">
+      <a href="{{ item.url }}">{{ item.title }}</a> - {{ item.date | date: "%Y-%m-%d" }}
+    </li>
   {% endfor %}
 </ul>
 
-<h2>Teaching</h2>
-<ul>
-  {% for item in site.teaching %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a> - {{ item.date | date: "%Y-%m-%d" }}</li>
+<h2 style="display: flex; justify-content: space-between; align-items: center;">
+  Teaching
+  {% if site.teaching.size > 2 %}
+  <span class="read-more-link" onclick="toggleTeaching()" id="teaching-btn">Read More</span>
+  {% endif %}
+</h2>
+<ul id="teaching-list">
+  {% assign sorted_teaching = site.teaching | sort: 'date' | reverse %}
+  {% for item in sorted_teaching %}
+    <li class="{% if forloop.index > 2 %}hidden teaching-hidden{% endif %}">
+      <a href="{{ item.url }}">{{ item.title }}</a> - {{ item.date | date: "%Y-%m-%d" }}
+    </li>
   {% endfor %}
 </ul>
+
+<style>
+.hidden { 
+  display: none; 
+}
+.read-more-link {
+  color: #1e6091;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.read-more-link:hover {
+  color: #144f77;
+}
+</style>
+
+<script>
+function toggleNews() {
+  const hiddenItems = document.querySelectorAll('.news-hidden');
+  const button = document.getElementById('news-btn');
+  
+  if (hiddenItems.length > 0) {
+    const isHidden = hiddenItems[0].classList.contains('hidden');
+    
+    hiddenItems.forEach(item => {
+      if (isHidden) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+    
+    button.textContent = isHidden ? 'Show Less' : 'Read More';
+  }
+}
+
+function toggleTeaching() {
+  const hiddenItems = document.querySelectorAll('.teaching-hidden');
+  const button = document.getElementById('teaching-btn');
+  
+  if (hiddenItems.length > 0) {
+    const isHidden = hiddenItems[0].classList.contains('hidden');
+    
+    hiddenItems.forEach(item => {
+      if (isHidden) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+    
+    button.textContent = isHidden ? 'Show Less' : 'Read More';
+  }
+}
+</script>

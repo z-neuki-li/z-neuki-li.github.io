@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="/assets/image/me_life.JPG" alt="It's me" style="float: right; width: 200px; height: 200px; border-radius: 10px; margin: 0 0 20px 30px; object-fit: cover;">
+<img src="/assets/image/byMendota.JPG" alt="It's me" style="float: right; width: 200px; height: 200px; border-radius: 10px; margin: 0 0 20px 30px; object-fit: cover;">
 
 I'm Neuki (Zihan Li, 李子晗), a PhD student in the [Department of Psychology at UW-Madison](https://psych.wisc.edu/), advised by Dr. Tim Rogers. 
 

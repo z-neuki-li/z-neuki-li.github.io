@@ -246,7 +246,7 @@
    display: none;
  }
  .site-nav .page-link {
-   color: rgb(7, 0, 77);
+   color: #111;
    line-height: 1.5;
  }
  .site-nav .page-link:not(:last-child) {
